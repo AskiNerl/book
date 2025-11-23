@@ -98,14 +98,6 @@ ol li::before {
     margin-right: 5px;
     display: inline;
 }
-
-ol {
-    counter-reset: list-item;  
-}
-
-ol li {
-    counter-increment: list-item;  
-}
 a {
     text-decoration: none;      
     color: inherit;            
