@@ -192,15 +192,55 @@ header {
 }
 
 
-.container {
-  display: flex;
-  flex-direction: row; 
-  gap: 20px;
-}
-@media (max-width: 600px) {
-  .container {
-    flex-direction: column; 
-    gap: 10px;
-  }
+.item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0;   
+    flex-direction: row-reverse;
 }
 
+@media (max-width: 900px) {
+    header { padding-top: 50px; }
+    h1 { font-size: 28px; }
+    p { font-size: 16px; }
+    .book-image { width: 260px; margin: 20px auto; }
+    .item, .item2, .item3 { gap: 16px; }
+    .container { gap: 16px; }
+}
+
+
+@media (max-width: 600px) {
+    header { padding-top: 40px; }
+    h1 { font-size: 22px; }
+    p { font-size: 15px; line-height: 1.4; }
+    .book-image {
+        width: 100%;
+        max-width: 320px;
+        margin: 16px auto;
+    }
+
+    .item, .item2, .item3 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .item p, .item2 p, .item3 p {
+        width: 100%;
+        margin: 8px 0;
+    }
+   
+    ul li, ol li {
+        display: block;
+        padding-left: 0;
+        margin: 10px 0;
+    }
+    
+    button {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+}
+
+
+button { touch-action: manipulation; -webkit-tap-highlight-color: rgba(0,0,0,0); }
