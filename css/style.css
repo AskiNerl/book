@@ -1,7 +1,7 @@
 body {
     background: #f0f0f0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #f0f0f0, #a0c0ff);
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
     text-align: center;
     padding: 20px;
     margin: 0;
