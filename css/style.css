@@ -76,28 +76,33 @@ ul li::before {
 .book-image:hover {
     transform: scale(1.05); 
 }
+
+
 ol {
-    list-style-type: none;      
-    padding-left: 0;            
-    text-align: center;         
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    counter-reset: item; 
 }
-
 ol li {
-    display: inline-block;      
-    margin: 15px 0;             
-    text-align: left;           
-    padding-left: 20px;         
+    display: block;         
+    margin: 15px 0;
+    text-align: left;
+    padding-left: 36px;     
     position: relative;
+    counter-increment: item; 
+}
+ol li::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 8px;               
+    top: 0.15em;
+    color: black;
+    font-size: 18px;
+    line-height: 1;
+    display: inline-block;
 }
 
-ol li::before {
-    content: counter(list-item) ". ";   
-    position: static;           
-    color: black;              
-    font-size: 18px;
-    margin-right: 5px;
-    display: inline;
-}  
 a {
     text-decoration: none;      
     color: inherit;            
