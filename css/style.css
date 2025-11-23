@@ -200,52 +200,36 @@ header {
     flex-direction: row-reverse;
 }
 
-@media (max-width: 900px) {
-    header { padding-top: 50px; }
-    h1 { font-size: 28px; }
-    p { font-size: 16px; }
-    .book-image { width: 260px; margin: 20px auto; }
-    .item, .item2, .item3 { gap: 16px; }
-    .container { gap: 16px; }
+
+ul {
+    list-style-type: disc;
+    padding-left: 28px;     
+    text-align: left;      
 }
 
+ul li {
+    display: inline-block;
+    margin: 5px 0;
+    text-align: left;
+    padding-left: 28px;     
+    position: relative;
+}
+
+ul li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;             
+    top: 0.15em;            
+    font-size: 18px;
+    line-height: 1;
+}
 
 @media (max-width: 600px) {
-    header { padding-top: 40px; }
-    h1 { font-size: 22px; }
-
-    p {
-        font-size: 16px;
-        line-height: 1.65;           
-        letter-spacing: 0.25px;     
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-        word-break: break-word;      
-        overflow-wrap: anywhere;
-        margin-bottom: 12px;
-    }
-
+ 
     ul li, ol li {
         display: block;
-        padding-left: 0;
-        margin: 10px 0;
+        padding-left: 28px;   
         line-height: 1.55;
         letter-spacing: 0.2px;
-    }
-
-    .book-list li { 
-        text-align: left; 
-        padding: 0 12px;              
-    }
-
-    .item, .item2, .item3 {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .item p, .item2 p, .item3 p {
-        width: 100%;
-        margin: 8px 0;
     }
 }
