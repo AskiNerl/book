@@ -213,11 +213,29 @@ header {
 @media (max-width: 600px) {
     header { padding-top: 40px; }
     h1 { font-size: 22px; }
-    p { font-size: 15px; line-height: 1.4; }
-    .book-image {
-        width: 100%;
-        max-width: 320px;
-        margin: 16px auto;
+
+    p {
+        font-size: 16px;
+        line-height: 1.65;           
+        letter-spacing: 0.25px;     
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        word-break: break-word;      
+        overflow-wrap: anywhere;
+        margin-bottom: 12px;
+    }
+
+    ul li, ol li {
+        display: block;
+        padding-left: 0;
+        margin: 10px 0;
+        line-height: 1.55;
+        letter-spacing: 0.2px;
+    }
+
+    .book-list li { 
+        text-align: left; 
+        padding: 0 12px;              
     }
 
     .item, .item2, .item3 {
@@ -225,22 +243,9 @@ header {
         align-items: center;
         text-align: center;
     }
+
     .item p, .item2 p, .item3 p {
         width: 100%;
         margin: 8px 0;
     }
-   
-    ul li, ol li {
-        display: block;
-        padding-left: 0;
-        margin: 10px 0;
-    }
-    
-    button {
-        padding: 10px 14px;
-        font-size: 15px;
-    }
 }
-
-
-button { touch-action: manipulation; -webkit-tap-highlight-color: rgba(0,0,0,0); }
